@@ -26,7 +26,7 @@ async function getWeather() {
         const iconCode = result.weather[0].icon;
         const descriptions = result.weather[0].description
 
-        // Display the temperature in the HTML and update the weather icon
+        // Display the temperature in the HTML and update\ the weather icon
         tempElement.textContent = `Temperature: ${temperatureCelsius}°C`;
         iconElement.src = `http://openweathermap.org/img/wn/${iconCode}.png`;
         description.textContent = `Weather description: ${descriptions}`;
