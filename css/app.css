@@ -1,0 +1,72 @@
+body{
+    background: #256EFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+  }
+
+.container{
+    max-width: 800px;
+    margin-top: 50px;
+    padding: 20px;
+    background: #a8c4ec;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn{
+    background: #206122;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#weather-info{
+    font-size: 20px;
+    
+}
+
+#weather-icon{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;
+}
+#temp-div {
+  font-size: 30px;
+  margin-top: 30px;
+}
+#description-div{
+  font-size: 20px;
+}
+
+#hourly-forecast{
+    margin-top: 50px;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+.hourly-item{
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    color: white;
+}
+
+.hourly-item img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading{
+    color: #fff;
+    margin-top: 10px;
+}
