@@ -1,14 +1,34 @@
 console.log(`JavaScript connected`);
-
+//Async/Await function
 async function fetchWeather() {
-    const apiKey = process.env.OPEN_WEATHER_API_KEY;
-    const url =
-    //fetch weather data from api
+    //Local Variables
+    const apiKey = `6d60883b5d34c83f5e1abcef6c4f1765`;
+    let city = document.getElementById("city-input").value;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    //clear after getting input value
+    document.getElementById("city-input").value = "";
+        //fetch weather data
     try {
-        const weatherData = await fetch();
+        let weatherData= await fetch(url);
+        let response = await weatherData.json();
+        console.log(response);
+        //Call display weather function here
     } catch(error) {
-        
+        console.error(`There was an error fetching your weather data.`, error);
     }
+}
+
+//Event listener for search button
+const searchWeather = document.getElementById("search-btn");
+searchWeather.addEventListener("click", ()=> {
+    //call fetchWeather function
+    fetchWeather();
+});
+
+//display weather function
+function displayWeather(weatherData) {
+    //Reference node for weather card
+
 }
 
 
