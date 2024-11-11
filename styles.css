@@ -38,13 +38,27 @@ body {
     color: white;
     background-color: #007bff;
     border: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 12px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
-.weather-container {
+#myWeatherAccordion {
+    width: 70%;
+}
+#city-input {
+    width: 50%;
+    border: none;
+    border-radius: 12px;
+}
+.accordion-button:hover {
+    background-color: #857C8D;
+    color: #ACF7C1;
+}
+
+/*.weather-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 2rem;
 }
@@ -62,7 +76,7 @@ body {
 .weather-info p {
     font-size: 1.2rem;
     margin: 0.5rem 0;
-}
+}*/
 
 .weather-map iframe {
     width: 100%;
