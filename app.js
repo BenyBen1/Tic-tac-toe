@@ -5,14 +5,22 @@ async function fetchWeather() {
     const apiKey = `6d60883b5d34c83f5e1abcef6c4f1765`;
     let city = document.getElementById("city-input").value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
     //clear after getting input value
     document.getElementById("city-input").value = "";
+
+    //Check whether input is valid
+    if (!city) {
+        alert('Please enter a city!');
+        return;
+    }
         //fetch weather data
     try {
         let weatherData= await fetch(url);
         let response = await weatherData.json();
         console.log(response);
         //Call display weather function here
+        displayWeather(response);
     } catch(error) {
         console.error(`There was an error fetching your weather data.`, error);
     }
@@ -28,7 +36,45 @@ searchWeather.addEventListener("click", ()=> {
 //display weather function
 function displayWeather(weatherData) {
     //Reference node for weather card
+    const cardBody = document.querySelector(".card-body");
+    //clear any previous data
+    cardBody.innerHTML = "";
 
+    //weather data from object array
+    const temperature= weatherData.main.temp;
+    const description= weatherData.weather[0].description;
+    const cityName= weatherData.name;
+    const countryName= weatherData.sys.country;
+    const iconCode= weatherData.weather[0].icon;
+
+    //weather icon url
+    const iconUrl= `https://openweathermap.org/img/w/${iconCode}.png`;
+
+    //create new elements and append to card-body
+    //Weather icon
+    const weatherIcon= document.createElement("img");
+    weatherIcon.src= iconUrl;
+    weatherIcon.alt= "The weather icon";
+    cardBody.appendChild(weatherIcon);
+    //Temperature Element
+    const temperatureElement= document.createElement("p");
+    temperatureElement.textContent= `Temperature:${temperature}\u00B0 C`;
+    cardBody.appendChild(temperatureElement);
+
+    //Description Element
+    const conditionElement= document.createElement("p");
+    conditionElement.textContent= `Conditions:${description}`;
+    cardBody.appendChild(conditionElement);
+
+    //City name Element
+    const cityElement= document.createElement("p");
+    cityElement.textContent = `City:${cityName}`
+    cardBody.appendChild(cityElement);
+
+    //Country name Element
+    const countryElement= document.createElement("p");
+    countryElement.textContent= `Country:${countryName}`;
+    cardBody.appendChild(countryElement);
 }
 
 
