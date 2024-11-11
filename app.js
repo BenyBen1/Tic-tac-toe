@@ -1,4 +1,43 @@
-async function getWeather() {
+console.log(`JavaScript connected`);
+
+async function fetchWeather() {
+    const apiKey = process.env.OPEN_WEATHER_API_KEY;
+    const url =
+    //fetch weather data from api
+    try {
+        const weatherData = await fetch();
+    } catch(error) {
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*async function getWeather() {
     // Get the city name from the input field
     const cityName = document.getElementById('city').value;
     const apiKey = "bb211d3d0e3ffb6aa101a71f6d562d37";  
@@ -39,4 +78,5 @@ async function getWeather() {
         console.error("Error fetching weather data:", error);
         tempElement.textContent = "Error fetching weather data.";
     }
-}
+}*/
+
