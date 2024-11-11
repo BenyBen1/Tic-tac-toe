@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Search for a city...">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+
+    <main class="weather-container">
+        <section class="weather-info" id="local-weather">
+            <h2>Current Weather</h2>
+            <p class="location" id="location">Location: <span>Auto-detected</span></p>
+            <p class="temp" id="temperature">Temperature: --</p>
+            <p class="humidity" id="humidity">Humidity: --</p>
+            <p class="wind-speed" id="wind-speed">Wind Speed: --</p>
+            <p class="conditions" id="conditions">Conditions: --</p>
+        </section>
+
+        <section class="weather-map">
+            <h2>Global Weather Map</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Weather Dashboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
