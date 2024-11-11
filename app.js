@@ -19,6 +19,15 @@ async function fetchWeather() {
         let weatherData= await fetch(url);
         let response = await weatherData.json();
         console.log(response);
+
+         // Extract latitude and longitude for the hourly forecast
+         const { lat, lon } = response.coord;
+
+         // Display current weather
+         displayWeather(response);
+ 
+         // Fetch hourly forecast based on coordinates
+         
         //Call display weather function here
         displayWeather(response);
     } catch(error) {
@@ -76,6 +85,8 @@ function displayWeather(weatherData) {
     countryElement.textContent= `Country:${countryName}`;
     cardBody.appendChild(countryElement);
 }
+
+
 
 
 
