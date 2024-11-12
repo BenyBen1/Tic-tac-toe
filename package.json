@@ -1,0 +1,28 @@
+{
+  "name": "weather-dashboard-with-geolocation",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel --open",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenyBen1/Weather-Dashboard-with-Geolocation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenyBen1/Weather-Dashboard-with-Geolocation/issues"
+  },
+  "homepage": "https://github.com/BenyBen1/Weather-Dashboard-with-Geolocation#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
