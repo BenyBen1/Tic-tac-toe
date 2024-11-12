@@ -18,6 +18,8 @@
         <div class="search-container">
             <input class="form-control" type="text" id="city-input" placeholder="Search for a city...">
             <button class="btn btn-success" id="search-btn">Search</button>
+            <button onclick="getWeatherByLocation()">Get Local Weather</button>
+
         </div>
     </header>
 
@@ -69,7 +71,7 @@
                                     </button>
                                 </h2>
                                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#myWeatherAccordion">
-                                    <div class="accordion-body"><p class="humidity" id="humidity">Humidity: --</p></div>
+                                    <div class="accordion-body"><p class="humidity-acc" id="humidity">Humidity: --</p></div>
                                   </div>
                             </div>
                             <div class="accordion-item">
@@ -129,6 +131,7 @@
                 <h2>Hourly Forecast</h2>
                 <!--Hourly Forecast Data goes here-->
                 <div id="hourly-forecast-container"></div>
+                <div class="card-body"></div>
               </div>
               
             </div>
