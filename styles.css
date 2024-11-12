@@ -94,3 +94,18 @@ body {
     text-align: center;
 }
 
+#weather-board{
+    height: 50vh;
+    background-color: #2A2B2A;
+
+}
+#icons p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+#icons i{
+    margin-right: 30px 0;
+    color: #F8F4E3;
+}

@@ -40,60 +40,32 @@
               <div class="tab-pane fade show active p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <section class=" row weather-info" id="local-weather">
                     <div class="col-md-4">
-                        <div class="accordion accordion-flush mt-2" id="myWeatherAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        My Location
-                                        <i class="fas fa-map-marker-alt fa-lg ms-auto"></i>
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#myWeatherAccordion">
-                                    <div class="accordion-body"><p class="location" id="location">Location: <span>Auto-detected</span></p></div>
-                                  </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                        Temp
-                                        <i class="fas fa-thermometer-half fa-lg ms-auto"></i> 
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#myWeatherAccordion">
-                                    <div class="accordion-body"><p class="temp" id="temperature">Temperature: --</p></div>
-                                  </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                        Humidity
-                                        <i class="fas fa-tint fa-lg ms-auto"></i> 
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#myWeatherAccordion">
-                                    <div class="accordion-body"><p class="humidity-acc" id="humidity">Humidity: --</p></div>
-                                  </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                        Wind Speed
-                                        <i class="fas fa-wind fa-lg ms-auto"></i>
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#myWeatherAccordion">
-                                    <div class="accordion-body"><p class="wind-speed" id="wind-speed">Wind Speed: --</p></div>
-                                  </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                                        Description
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#myWeatherAccordion">
-                                    <div class="accordion-body"><p class="conditions" id="conditions">Conditions: --</p></div>
-                                  </div>
+                        <div class="row">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="col-sm col-md-6">
+                                    <div class="card" style="width: 18rem" id="landing-card">
+                                        <img src="public/images/weather-app.jpeg" alt="card-img-top" alt="weather-icon">
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <p>Discover the weather and decide what you will do today.</p>
+                                                <div class="col-md mb-3">
+                                                    <div class="card">
+                                                     <div class="card-header">
+                                                         <h2>Your Location Weather</h2>
+                                                         <img id="location-weather-icon" alt="weather icon" style="display: none;">
+                                                         <div id="location-temp"></div>
+                                                         <div id="location-description"></div>
+                                                         <div id="location-city"></div>
+                                                     </div>
+                                                    </div>
+                                                 </div>
+                                                <a href="#local-weather" class="btn btn-primary" id="link-button">
+                                                    <i class="fa-brands fa-searchengin fa-lg" id="search-weather">Weather Board</i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
